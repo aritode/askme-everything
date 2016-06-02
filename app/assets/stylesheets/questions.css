@@ -41,3 +41,8 @@
 .question-actions a {
     margin-left: 10px;
 }
+
+.question_counter {
+    color: white;
+    padding-top: 15px;
+}

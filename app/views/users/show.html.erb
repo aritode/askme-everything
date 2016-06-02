@@ -37,6 +37,10 @@
   </div>
 </div>
 
+<div class="question_counter">
+  <%= "Всего: #{pluralize_russian(@questions.size, 'вопрос', 'вопроса', 'вопросов')}" %>
+</div>
+
 <%#Блок со списком вопросов к пользователю%>
 <div class="column-3-4">
   <div class="user-questions buffer-both">
