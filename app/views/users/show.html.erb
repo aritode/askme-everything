@@ -1,7 +1,7 @@
 <h1><%= @user.name%></h1>
 
 <div>
-  <%= image_tag @user.avatar_url, alt: '[Photo]' %>
+  <%= image_tag user_avatar(@user), alt: '[Photo]' %>
 </div>
 
 <h2>@<%= @user.username %></h2>

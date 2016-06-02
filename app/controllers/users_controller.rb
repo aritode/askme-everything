@@ -10,9 +10,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.new(
-                    name: 'Vadim',
-                    username: 'installero',
-                    avatar_url: '//secure.gravatar.com/avatar/71269686e0f757ddb4f73614f43ae445?s=100'
+        name: 'Vadim',
+        username: 'installero',
+        avatar_url: '//secure.gravatar.com/avatar/71269686e0f757ddb4f73614f43ae445?s=100'
     )
   end
 end
