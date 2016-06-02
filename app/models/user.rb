@@ -7,8 +7,25 @@ class User < ActiveRecord::Base
 
   has_many :questions
 
-  validates :email, :username, presence: true
-  validates :email, :username, uniqueness: true
+  validates :email,
+            presence: true,
+            uniqueness: true,
+            format: {
+                with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/,
+                message: "must be correct!"
+            }
+
+  validates :username,
+            presence: true,
+            uniqueness: true,
+            length: {
+                maximum: 40,
+                too_long: "%{count} characters is the maximum allowed"
+            },
+            format: {
+                with: /\A[a-zA-Z0-9_]+\z/,
+                message: "only with Latin letters, Numbers and _ is allowed!"
+            }
 
   attr_accessor :password
 
