@@ -7,6 +7,11 @@ module ApplicationHelper
     end
   end
 
+  # Font Awesome Helper
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
   def pluralize_russian(number, krokodil, krokodila, krokodilov)
 
     ostatok = number % 10
