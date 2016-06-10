@@ -34,10 +34,11 @@
         <div class="form-field">
           <%= f.label 'Цвет фона возле аватарки', class: 'form-label' %>
           <%= f.color_field :header_color, value: @user.header_color %>
+          <br><br>
           <div>Введите цвет вручную:</div>
-          <div class="text-small">(для несовместимых браузеров)</div>
-          <%= f.text_field :header_color, size: "25x25" %>
-          <div class="text-small"> цвет по умолчанию - сделайте ввод пустым </div>
+
+          <%= f.text_field :header_color, size: 25 %>
+          <div class="text-small">(для несовместимых браузеров)<br> цвет по умолчанию - сделайте ввод пустым</div>
         </div>
 
         <div class="buffer-top-large buffer-bottom">
@@ -59,4 +60,17 @@
         </div>
     <% end %>
   </div>
+
+  <br>
+
+  <% if @user == current_user %>
+      <div class="column-1-2 question-actions buffer-top">
+        <div class="text-medium button button-gray button-small">
+          Удалить аккаунт пользователя
+        </div>
+        <%= link_to fa_icon('trash-o'), user_path(@user),
+                    method: :delete, data: {confirm: 'Точно удалить аккаунт и пользователя навсегда?'} %>
+      </div>
+  <% end %>
+
 </div>
