@@ -34,11 +34,6 @@
         <div class="form-field">
           <%= f.label 'Цвет фона возле аватарки', class: 'form-label' %>
           <%= f.color_field :header_color, value: @user.header_color %>
-          <br><br>
-          <div>Введите цвет вручную:</div>
-
-          <%= f.text_field :header_color, size: 25 %>
-          <div class="text-small">(для несовместимых браузеров)<br> цвет по умолчанию - сделайте ввод пустым</div>
         </div>
 
         <div class="buffer-top-large buffer-bottom">
