@@ -18,13 +18,13 @@ module ApplicationHelper
     ostatok100 = number % 100
 
     if ostatok100 >= 11 && ostatok100 <= 14
-      return "#{number} #{krokodilov}"
+      return "#{krokodilov}"
     elsif ostatok == 1
-      return "#{number} #{krokodil}"
+      return " #{krokodil}"
     elsif ostatok >= 2 && ostatok <= 4
-      return "#{number} #{krokodila}"
+      return "#{krokodila}"
     elsif ostatok > 4 || ostatok == 0
-      return "#{number} #{krokodilov}"
+      return "#{krokodilov}"
     end
   end
 end
