@@ -10,4 +10,8 @@ class Question < ActiveRecord::Base
                 maximum: 255,
                 too_long: "%{count} characters is the maximum allowed"
             }
+
+  def author
+    User.find(self.author_id)
+  end
 end
